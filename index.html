@@ -5,8 +5,12 @@
     <meta name="description" content="42Certificate of Completion" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>42Certificate</title>
+
+    <!-- preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- preload font-->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap"
@@ -21,12 +25,124 @@
       />
     </noscript>
 
+    <!-- preload images -->
     <link rel="preload" href="/assets/images/logo.svg" as="image" />
     <link rel="preload" href="/assets/images/qr.png" as="image" />
     <link rel="preload" href="/assets/images/sign.png" as="image" />
     <link rel="preload" href="/assets/images/cheering_vector.svg" as="image" />
     <link rel="preload" href="/assets/images/background.svg" as="image" />
 
+    <!-- styles -->
+
+    <style>
+      *,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+        font-family: 'work sans', sans-serif;
+        color: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        max-width: 1190px;
+        height: 100vh;
+        background: url(/assets/images/background.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 65px 115px;
+      }
+
+      header .logo {
+        position: absolute;
+        top: 65px;
+        left: 667px;
+      }
+
+      header .logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      header article {
+        position: absolute;
+        top: 395px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      header article p:first-child {
+        max-width: 384px;
+        color: #d9d9d9;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 42px;
+        margin-bottom: 12px;
+      }
+
+      header article p:first-child span {
+        color: #ffd600;
+      }
+
+      header article h1 {
+        font-weight: 800;
+        font-size: 147.23px;
+        line-height: 173px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+
+      header article p:nth-of-type(2) {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 66px;
+      }
+
+      header article p:last-child {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 40px;
+        color: #a8a8a8;
+        max-width: 793px;
+      }
+
+      header article p:last-child span {
+        color: #fff;
+      }
+
+      .qr_code {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: calc(50% - 75px);
+        top: 1065px;
+        border-radius: 4px;
+      }
+
+      .qr_code img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>
@@ -49,11 +165,11 @@
         </article>
       </header>
       <section class="qr_code">
-        <img src="/assets/images/qr.png" alt="qr code" />
+        <img src="/assets/images/qr.png" alt="qr code" loading="lazy" />
       </section>
       <footer>
         <section>
-          <img src="/assets/images/sign.png" alt="signature" />
+          <img src="/assets/images/sign.png" alt="signature" loading="lazy" />
           <hr />
           <article>
             <p>Yusuf Abdullaev,</p>
@@ -61,7 +177,11 @@
           </article>
         </section>
         <section>
-          <img src="/assets/images/cheering_vector.svg" alt="cheering vector" />
+          <img
+            src="/assets/images/cheering_vector.svg"
+            alt="cheering vector"
+            loading="lazy"
+          />
           <p class="date">2023-yil, 25-iyun</p>
         </section>
       </footer>
