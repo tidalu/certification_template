@@ -8,9 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+
+    <link rel="preload" href="/assets/images/logo.svg" as="image" />
+    <link rel="preload" href="/assets/images/qr.png" as="image" />
+    <link rel="preload" href="/assets/images/sign.png" as="image" />
+    <link rel="preload" href="/assets/images/cheering_vector.svg" as="image" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>
